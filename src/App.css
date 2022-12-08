@@ -1,0 +1,8 @@
+.App {
+  font-family: "휴먼범석체";
+}
+
+@font-face {
+  font-family: "휴먼범석체";
+  src: url(/src/assets/fonts/휴먼범석체.otf);
+}
