@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ProgressBar, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { QuestionData } from "../assets/data/questiondata";
 
 const Question = () => {
@@ -11,42 +12,50 @@ const Question = () => {
     { id: "TF", score: 0 },
     { id: "JP", score: 0 },
   ]);
+  const navigate = useNavigate();
 
   console.log("totalScore", totalScore);
 
-  const handleClickButtonA = (no, type) => {
-    if (type === "EI") {
-      // 기존 스코어에 더 할 값을 계산 (기존의 값 + 배점)
-      const addScore = totalScore[0].score + no;
-      // 새로운 객체 생성
-      const newObject = { id: "EI", score: addScore };
-      // splice(javascript 함수) 통해 새로운 객체를 해당 객체 자리에 넣어줌
-      totalScore.splice(0, 1, newObject);
-    } else if (type === "SN") {
-      const addScore = totalScore[1].score + no;
+  const handleClickButton = (no, type) => {
+    const newScore = totalScore.map((s) =>
+      s.id === type ? { id: s.id, score: s.score + no } : s
+    );
 
-      const newObject = { id: "SN", score: addScore };
-
-      totalScore.splice(1, 1, newObject);
-    } else if (type === "TF") {
-      const addScore = totalScore[2].score + no;
-
-      const newObject = { id: "TF", score: addScore };
-
-      totalScore.splice(2, 1, newObject);
+    setTotalScore(newScore);
+    // 다음 문제로 문제 수 증가
+    if (QuestionData.length !== questionNo + 1) {
+      setQuestionNo(questionNo + 1);
     } else {
-      const addScore = totalScore[3].score + no;
-
-      const newObject = { id: "JP", score: addScore };
-
-      totalScore.splice(3, 1, newObject);
+      //결과 페이지 이동
+      navigate("/result");
     }
 
-    setQuestionNo(questionNo + 1);
-  };
+    // if (type === "EI") {
+    //   // 기존 스코어에 더 할 값을 계산 (기존의 값 + 배점)
+    //   const addScore = totalScore[0].score + no;
+    //   // 새로운 객체 생성
+    //   const newObject = { id: "EI", score: addScore };
+    //   // splice(javascript 함수) 통해 새로운 객체를 해당 객체 자리에 넣어줌
+    //   totalScore.splice(0, 1, newObject);
+    // } else if (type === "SN") {
+    //   const addScore = totalScore[1].score + no;
 
-  const handleClickButtonB = (no) => {
-    setQuestionNo(questionNo + 1);
+    //   const newObject = { id: "SN", score: addScore };
+
+    //   totalScore.splice(1, 1, newObject);
+    // } else if (type === "TF") {
+    //   const addScore = totalScore[2].score + no;
+
+    //   const newObject = { id: "TF", score: addScore };
+
+    //   totalScore.splice(2, 1, newObject);
+    // } else {
+    //   const addScore = totalScore[3].score + no;
+
+    //   const newObject = { id: "JP", score: addScore };
+
+    //   totalScore.splice(3, 1, newObject);
+    // }
   };
 
   return (
@@ -60,7 +69,7 @@ const Question = () => {
       <Title>{QuestionData[questionNo].title}</Title>
       <ButtonGroup>
         <Button
-          onClick={() => handleClickButtonA(1, QuestionData[questionNo].type)}
+          onClick={() => handleClickButton(1, QuestionData[questionNo].type)}
           style={{
             width: "40%",
             minHeight: "200px",
@@ -70,7 +79,7 @@ const Question = () => {
           {QuestionData[questionNo].answera}
         </Button>
         <Button
-          onClick={() => handleClickButtonB(0, QuestionData[questionNo].type)}
+          onClick={() => handleClickButton(0, QuestionData[questionNo].type)}
           style={{
             width: "40%",
             minHeight: "200px",
