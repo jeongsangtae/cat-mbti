@@ -1,9 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 // css-in-js
 import styled from "styled-components";
-import CatImage from "../assets/logocat.jpg";
 import Button from "react-bootstrap/Button";
-import { useNavigate } from "react-router-dom";
+import CatImage from "../assets/logocat.jpg";
 
 const Home = () => {
   const navigate = useNavigate();
