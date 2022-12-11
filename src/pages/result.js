@@ -3,9 +3,12 @@ import { useNavigate } from "react-router-dom";
 // css-in-js
 import styled from "styled-components";
 import Button from "react-bootstrap/Button";
-import CatImage from "../assets/logocat.jpg";
+// import CatImage from "../assets/logocat.jpg";
+import { ResultData } from "../assets/data/resultdata";
 
 const Result = () => {
+  const navigate = useNavigate();
+
   return (
     <Wrapper>
       <Header>예비집사 판별기</Header>
@@ -13,14 +16,21 @@ const Result = () => {
         <Title>결과 보기</Title>
         <LogoImage>
           <img
-            src={CatImage}
+            src={ResultData[0].image}
             className="rounded-circle"
             width={350}
             height={350}
           />
         </LogoImage>
-        <Desc>예비 집사님과 찰떡궁합인 고양이는 렉돌입니다.</Desc>
-        <Button style={{ fontFamily: "휴먼범석체" }}>테스트 다시하기</Button>
+        <Desc>
+          예비 집사님과 찰떡궁합인 고양이는 {ResultData[0].name}입니다.
+        </Desc>
+        <Button
+          style={{ fontFamily: "휴먼범석체" }}
+          onClick={() => navigate("/")}
+        >
+          테스트 다시하기
+        </Button>
       </Contents>
     </Wrapper>
   );

@@ -15,7 +15,7 @@ import Siamese from "../cat/siamese.jpg";
 import Sphinx from "../cat/sphinx.jpg";
 import Turkishangora from "../cat/turkishangora.jpg";
 
-const ResultData = [
+export const ResultData = [
   {
     id: 1,
     name: "러시안 블루",
