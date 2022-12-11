@@ -10,7 +10,7 @@ const Result = () => {
     <Wrapper>
       <Header>예비집사 판별기</Header>
       <Contents>
-        <Title>나에게 맞는 주인님은?</Title>
+        <Title>결과 보기</Title>
         <LogoImage>
           <img
             src={CatImage}
@@ -19,8 +19,8 @@ const Result = () => {
             height={350}
           />
         </LogoImage>
-        <Desc>MBTI를 기반으로 하는 나랑 잘맞는 고양이 찾기!</Desc>
-        <Button style={{ fontFamily: "휴먼범석체" }}>테스트 시작하기</Button>
+        <Desc>예비 집사님과 찰떡궁합인 고양이는 렉돌입니다.</Desc>
+        <Button style={{ fontFamily: "휴먼범석체" }}>테스트 다시하기</Button>
       </Contents>
     </Wrapper>
   );
