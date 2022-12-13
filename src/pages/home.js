@@ -28,10 +28,11 @@ const Home = () => {
         </LogoImage>
         <Desc>MBTI를 기반으로 하는 나랑 잘맞는 고양이 찾기!</Desc>
         <Button
+          variant="success"
           style={{
             fontFamily: "휴먼범석체",
-            marginBottom: "15px",
             marginTop: "15px",
+            marginBottom: "15px",
           }}
           onClick={handelClickButton}
         >
@@ -47,6 +48,7 @@ export default Home;
 const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
+  background-color: #fdf5e6;
 `;
 
 const Header = styled.div`
@@ -55,6 +57,8 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "휴먼범석체";
+  background-color: #e9d4b3;
+  color: white;
 `;
 
 const Contents = styled.div`
@@ -68,6 +72,7 @@ const Title = styled.div`
   font-size: 30px;
   margin-top: 40px;
   font-family: "휴먼범석체";
+  color: ;
 `;
 
 const LogoImage = styled.div`

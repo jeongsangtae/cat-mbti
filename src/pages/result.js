@@ -91,6 +91,4 @@ const Desc = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 15px;
-  margin-bottom: 30px;
 `;

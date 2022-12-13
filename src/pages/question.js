@@ -71,52 +71,68 @@ const Question = () => {
   };
 
   return (
-    <Wrapper>
+    <Container>
       <ProgressBar
-        striped
-        variant="danger"
+        variant="success"
         now={(questionNo / QuestionData.length) * 100}
-        style={{ marginTop: "20px" }}
+        style={{ marginTop: "20px", width: "80%" }}
       />
-      <Title>{QuestionData[questionNo].title}</Title>
-      <ButtonGroup>
-        <Button
-          onClick={() => handleClickButton(1, QuestionData[questionNo].type)}
-          style={{
-            width: "40%",
-            minHeight: "200px",
-            fontSize: "15pt",
-          }}
-        >
-          {QuestionData[questionNo].answera}
-        </Button>
-        <Button
-          onClick={() => handleClickButton(0, QuestionData[questionNo].type)}
-          style={{
-            width: "40%",
-            minHeight: "200px",
-            fontSize: "15pt",
-            marginLeft: "20px",
-          }}
-        >
-          {QuestionData[questionNo].answerb}
-        </Button>
-      </ButtonGroup>
-    </Wrapper>
+      <Wrapper>
+        <Title>{QuestionData[questionNo].title}</Title>
+        <ButtonGroup>
+          <Button
+            variant="success"
+            onClick={() => handleClickButton(1, QuestionData[questionNo].type)}
+            style={{
+              width: "40%",
+              minHeight: "200px",
+              fontSize: "15pt",
+            }}
+          >
+            {QuestionData[questionNo].answera}
+          </Button>
+          <Button
+            variant="success"
+            onClick={() => handleClickButton(0, QuestionData[questionNo].type)}
+            style={{
+              width: "40%",
+              minHeight: "200px",
+              fontSize: "15pt",
+              marginLeft: "20px",
+            }}
+          >
+            {QuestionData[questionNo].answerb}
+          </Button>
+        </ButtonGroup>
+      </Wrapper>
+    </Container>
   );
 };
 
 export default Question;
 
-const Wrapper = styled.div`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
   width: 100%;
+  background-color: #e9d4b3;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center
+  justify-content: center;
 `;
 
 const Title = styled.div`
   font-size: 30pt;
   text-align: center;
   font-family: "휴먼범석체";
+  color: white;
+  margin-top: 20px;
 `;
 
 const ButtonGroup = styled.div`
@@ -125,4 +141,5 @@ const ButtonGroup = styled.div`
   align-items: center;
   justify-content: center;
   font-family: "휴먼범석체";
+  margin-top: 40px;
 `;
