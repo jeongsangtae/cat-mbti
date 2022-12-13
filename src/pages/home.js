@@ -28,7 +28,11 @@ const Home = () => {
         </LogoImage>
         <Desc>MBTI를 기반으로 하는 나랑 잘맞는 고양이 찾기!</Desc>
         <Button
-          style={{ fontFamily: "휴먼범석체" }}
+          style={{
+            fontFamily: "휴먼범석체",
+            marginBottom: "15px",
+            marginTop: "15px",
+          }}
           onClick={handelClickButton}
         >
           테스트 시작하기
@@ -71,7 +75,7 @@ const LogoImage = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 20pt;
+  font-size: 18pt;
   margin-top: 30px;
   font-family: "휴먼범석체";
 `;
