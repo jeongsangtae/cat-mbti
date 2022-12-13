@@ -36,6 +36,7 @@ const Result = () => {
           />
         </LogoImage>
         <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
+        <Desc>{resultData.desc}</Desc>
         <ButtonGroup>
           <Button
             style={{ fontFamily: "휴먼범석체", width: 130 }}
