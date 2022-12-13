@@ -84,7 +84,7 @@ const Question = () => {
           onClick={() => handleClickButton(1, QuestionData[questionNo].type)}
           style={{
             width: "40%",
-            minHeight: "180px",
+            minHeight: "200px",
             fontSize: "15pt",
           }}
         >
@@ -94,7 +94,7 @@ const Question = () => {
           onClick={() => handleClickButton(0, QuestionData[questionNo].type)}
           style={{
             width: "40%",
-            minHeight: "180px",
+            minHeight: "200px",
             fontSize: "15pt",
             marginLeft: "20px",
           }}
