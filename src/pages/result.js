@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Button from "react-bootstrap/Button";
 // import CatImage from "../assets/logocat.jpg";
 import { ResultData } from "../assets/data/resultdata";
+import KakaoShareButton from "../component/kakaosharebutton";
 
 const Result = () => {
   const navigate = useNavigate();
@@ -35,12 +36,15 @@ const Result = () => {
           />
         </LogoImage>
         <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
-        <Button
-          style={{ fontFamily: "휴먼범석체" }}
-          onClick={() => navigate("/")}
-        >
-          테스트 다시하기
-        </Button>
+        <ButtonGroup>
+          <Button
+            style={{ fontFamily: "휴먼범석체", width: 130 }}
+            onClick={() => navigate("/")}
+          >
+            테스트 다시하기
+          </Button>
+          <KakaoShareButton />
+        </ButtonGroup>
       </Contents>
     </Wrapper>
   );
@@ -82,4 +86,9 @@ const Desc = styled.div`
   font-size: 20pt;
   margin-top: 30px;
   font-family: "휴먼범석체";
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
