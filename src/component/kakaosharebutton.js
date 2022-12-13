@@ -1,87 +1,47 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 const { Kakao } = window;
 
 const KakaoShareButton = () => {
   const url = "https://cat-mbti-jeong.netlify.app/";
-  const resultUrl = widow.location.href;
+  const resultUrl = window.location.href;
 
   console.log("ddd", resultUrl, url);
 
   React.useEffect(() => {
+    Kakao.cleanup();
     Kakao.init("76a27ef7b1de116a3abf59841429dde1");
+    console.log(Kakao.isInitialized());
   }, []);
 
-  Kakao.Share.sendDefault({
-    objectType: "feed",
-    content: {
-      title: "오늘의 디저트",
-      description: "아메리카노, 빵, 케익",
-      imageUrl:
-        "https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
-      link: {
-        mobileWebUrl: "https://developers.kakao.com",
-        webUrl: "https://developers.kakao.com",
+  const shareKakao = () => {
+    Kakao.Share.sendDefault({
+      objectType: "feed",
+      content: {
+        title: "예비집사 판별기 결과",
+        description:
+          "예비 집사님이 고양이를 키운다면 가장 잘 맞는 고양이는 아비시니안입니다.",
+        imageUrl:
+          "https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
+        link: {
+          mobileWebUrl: "https://developers.kakao.com",
+          webUrl: "https://developers.kakao.com",
+        },
       },
-    },
-    itemContent: {
-      profileText: "Kakao",
-      profileImageUrl:
-        "https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
-      titleImageUrl:
-        "https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
-      titleImageText: "Cheese cake",
-      titleImageCategory: "Cake",
-      items: [
+      buttons: [
         {
-          item: "Cake1",
-          itemOp: "1000원",
-        },
-        {
-          item: "Cake2",
-          itemOp: "2000원",
-        },
-        {
-          item: "Cake3",
-          itemOp: "3000원",
-        },
-        {
-          item: "Cake4",
-          itemOp: "4000원",
-        },
-        {
-          item: "Cake5",
-          itemOp: "5000원",
+          title: "나도 테스트 하러가기",
+          link: {
+            mobileWebUrl: url,
+            webUrl: url,
+          },
         },
       ],
-      sum: "총 결제금액",
-      sumOp: "15000원",
-    },
-    social: {
-      likeCount: 10,
-      commentCount: 20,
-      sharedCount: 30,
-    },
-    buttons: [
-      {
-        title: "웹으로 이동",
-        link: {
-          mobileWebUrl: "https://developers.kakao.com",
-          webUrl: "https://developers.kakao.com",
-        },
-      },
-      {
-        title: "앱으로 이동",
-        link: {
-          mobileWebUrl: "https://developers.kakao.com",
-          webUrl: "https://developers.kakao.com",
-        },
-      },
-    ],
-  });
+    });
+  };
   return (
     <Button
       style={{ fontFamily: "휴먼범석체", width: 130, marginLeft: "20px" }}
-      onClick={() => navigate("/")}
     >
       카카오톡 공유하기
     </Button>
