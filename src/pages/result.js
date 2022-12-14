@@ -39,6 +39,7 @@ const Result = () => {
         <Desc>{resultData.desc}</Desc>
         <ButtonGroup>
           <Button
+            variant="success"
             style={{ fontFamily: "휴먼범석체", width: 130 }}
             onClick={() => navigate("/")}
           >
@@ -56,6 +57,7 @@ export default Result;
 const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
+  background-color: #fdf5e6;
 `;
 
 const Header = styled.div`
@@ -64,6 +66,8 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "휴먼범석체";
+  background-color: #e9d4b3;
+  color: white;
 `;
 
 const Contents = styled.div`
