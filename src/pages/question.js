@@ -131,7 +131,7 @@ const Title = styled.div`
   font-size: 30pt;
   text-align: center;
   font-family: "휴먼범석체";
-  color: white;
+  color: #198754;
   margin-top: 20px;
 `;
 
