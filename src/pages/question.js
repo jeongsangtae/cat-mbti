@@ -115,9 +115,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #e9d4b3;
   height: 100vh;
   width: 100%;
-  background-color: #e9d4b3;
 `;
 
 const Wrapper = styled.div`
@@ -125,6 +125,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center
   justify-content: center;
+  height: 80vh;
+  width: 100%;
 `;
 
 const Title = styled.div`
@@ -133,6 +135,7 @@ const Title = styled.div`
   font-family: "휴먼범석체";
   color: #198754;
   margin-top: 20px;
+  font-weight: 550;
 `;
 
 const ButtonGroup = styled.div`
@@ -142,4 +145,5 @@ const ButtonGroup = styled.div`
   justify-content: center;
   font-family: "휴먼범석체";
   margin-top: 40px;
+  width: 100%;
 `;

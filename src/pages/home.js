@@ -88,7 +88,7 @@ const LogoImage = styled.div`
   width: 200;
   height: 200;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
 
 const Desc = styled.div`
