@@ -31,10 +31,11 @@ const Home = () => {
         <Button
           variant="success"
           style={{
+            width: "170px",
             fontFamily: "휴먼범석체",
             marginTop: "15px",
             marginBottom: "15px",
-            fontSize: "25px",
+            fontSize: "24px",
           }}
           onClick={handelClickButton}
         >

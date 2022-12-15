@@ -22,9 +22,9 @@ const Result = () => {
   console.log(resultData);
 
   return (
-    <Wrapper>
+    <Container>
       <Header>예비집사 판별기</Header>
-      <Contents>
+      <Wrapper>
         <Title>결과 보기</Title>
         <LogoImage>
           <img
@@ -35,27 +35,46 @@ const Result = () => {
             height={350}
           />
         </LogoImage>
-        <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
-        <Desc>{resultData.desc}</Desc>
-        <ButtonGroup>
+        <Desc
+          style={{
+            fontSize: "17pt",
+          }}
+        >
+          예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.
+        </Desc>
+        <Desc
+          style={{
+            marginTop: 10,
+          }}
+        >
+          {resultData.desc}
+        </Desc>
+        <div>
           <Button
             variant="success"
-            style={{ fontFamily: "휴먼범석체", width: 130 }}
+            style={{
+              width: "170px",
+              fontFamily: "휴먼범석체",
+              marginTop: "15px",
+              fontSize: "24px",
+            }}
             onClick={() => navigate("/")}
           >
             테스트 다시하기
           </Button>
           <KakaoShareButton data={resultData} />
-        </ButtonGroup>
-      </Contents>
-    </Wrapper>
+        </div>
+      </Wrapper>
+    </Container>
   );
 };
 
 export default Result;
 
-const Wrapper = styled.div`
-  height: 100vh;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 120vh;
   width: 100%;
   background-color: #fdf5e6;
 `;
@@ -65,35 +84,39 @@ const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 10vh;
+  width: 100%;
   font-family: "휴먼범석체";
   background-color: #e9d4b3;
   color: white;
 `;
 
-const Contents = styled.div`
+const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 80vh;
+  width: 100%;
 `;
 
 const Title = styled.div`
   font-size: 30px;
   margin-top: 40px;
   font-family: "휴먼범석체";
+  color: #198754;
+  font-weight: 550;
 `;
 
 const LogoImage = styled.div`
   margin-top: 10px;
+  margin-bottom: 15px;
 `;
 
 const Desc = styled.div`
-  font-size: 20pt;
-  margin-top: 30px;
+  font-size: 15pt;
   font-family: "휴먼범석체";
-`;
-
-const ButtonGroup = styled.div`
-  display: flex;
-  flex-direction: row;
+  text-align: center;
+  color: #198754;
+  width: 85%;
 `;

@@ -40,9 +40,11 @@ const KakaoShareButton = ({ data }) => {
       variant="warning"
       onClick={shareKakao}
       style={{
+        width: "170px",
         fontFamily: "휴먼범석체",
-        width: 130,
         marginLeft: "20px",
+        marginTop: "15px",
+        fontSize: "24px",
         color: "white",
       }}
     >
