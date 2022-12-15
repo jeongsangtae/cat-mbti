@@ -97,8 +97,8 @@ const Question = () => {
             style={{
               width: "40%",
               minHeight: "200px",
-              fontSize: "15pt",
               marginLeft: "20px",
+              fontSize: "15pt",
             }}
           >
             {QuestionData[questionNo].answerb}
@@ -123,13 +123,14 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
   justify-content: center;
   height: 80vh;
   width: 100%;
 `;
 
 const Title = styled.div`
+  width: 90%;
   font-size: 30pt;
   text-align: center;
   font-family: "휴먼범석체";
