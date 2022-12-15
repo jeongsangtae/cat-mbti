@@ -40,7 +40,8 @@ const Result = () => {
             fontSize: "17pt",
           }}
         >
-          예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.
+          예비 집사님과 찰떡궁합인 고양이는 {resultData.name}
+          입니다.
         </Desc>
         <Desc
           style={{
