@@ -63,22 +63,22 @@ const Header = styled.div`
   font-family: "휴먼범석체";
   background-color: #e9d4b3;
   color: white;
-  width: 100%;
   height: 10vh;
+  width: 100%;
 `;
 
 const Wrapper = styled.div`
-  display: flex;
-  width: 100%
   height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 `;
 
 const Title = styled.div`
   font-size: 30px;
-  margin-top: 40px;
+  margin-top: 20px;
   font-family: "휴먼범석체";
   color: #198754;
   font-weight: 550;
