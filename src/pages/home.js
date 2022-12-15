@@ -77,8 +77,8 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 30px;
-  margin-top: 40px;
+  margin-top: 45px;
+  font-size: 30pt;
   font-family: "휴먼범석체";
   color: #198754;
   font-weight: 550;
@@ -90,7 +90,7 @@ const LogoImage = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 18pt;
+  font-size: 20pt;
   font-family: "휴먼범석체";
   color: #198754;
   font-weight: 550;
