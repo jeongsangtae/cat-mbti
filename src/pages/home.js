@@ -78,7 +78,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-  margin-top: 45px;
+  margin-top: 50px;
   font-size: 30px;
   font-family: "휴먼범석체";
   color: #198754;
