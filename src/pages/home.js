@@ -34,7 +34,7 @@ const Home = () => {
             width: "170px",
             fontFamily: "휴먼범석체",
             marginTop: "15px",
-            marginBottom: "15px",
+            marginBottom: "40px",
             fontSize: "24px",
           }}
           onClick={handelClickButton}
@@ -93,7 +93,7 @@ const LogoImage = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 18pt;
+  font-size: 17pt;
   font-family: "휴먼범석체";
   color: #198754;
   font-weight: 550;
