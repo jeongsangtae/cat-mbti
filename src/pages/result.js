@@ -57,6 +57,7 @@ const Result = () => {
               width: "170px",
               fontFamily: "휴먼범석체",
               marginTop: "15px",
+              marginBottom: "10px",
               fontSize: "24px",
             }}
             onClick={() => navigate("/")}

@@ -44,6 +44,7 @@ const KakaoShareButton = ({ data }) => {
         fontFamily: "휴먼범석체",
         marginLeft: "20px",
         marginTop: "15px",
+        marginBottom: "10px",
         fontSize: "24px",
         color: "white",
       }}
