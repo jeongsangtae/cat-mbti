@@ -22,8 +22,8 @@ const Home = () => {
             alt="고양이 사진"
             src={CatImage}
             className="rounded-circle"
-            width={350}
-            height={350}
+            width={300}
+            height={300}
           />
         </LogoImage>
         <Desc>MBTI를 기반으로 하는 나랑 잘맞는 고양이 찾기!</Desc>
@@ -34,7 +34,7 @@ const Home = () => {
             width: "170px",
             fontFamily: "휴먼범석체",
             marginTop: "15px",
-            marginBottom: "40px",
+            marginBottom: "20px",
             fontSize: "24px",
           }}
           onClick={handelClickButton}

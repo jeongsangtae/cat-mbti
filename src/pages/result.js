@@ -31,8 +31,8 @@ const Result = () => {
             alt="결과이미지"
             src={resultData.image}
             className="rounded-circle"
-            width={350}
-            height={350}
+            width={300}
+            height={300}
           />
         </LogoImage>
         <Desc
