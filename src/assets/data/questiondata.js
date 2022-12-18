@@ -3,7 +3,7 @@ export const QuestionData = [
     id: 1,
     title: "새로운 고양이를 데려왔다! 나의 반응은?",
     answera: "머해? 이름은 뭐로 해줄까? 자꾸 말을 걸고 싶다.",
-    answerb: "머해? 이름은 뭐로 해줄까? 자꾸 말을 걸고 싶다.",
+    answerb: "혼자만의 시간이 필요하지? 적응할 시간을 준다.",
     type: "EI",
   },
   {
